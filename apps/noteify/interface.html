@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="../../css/spectre.min.css">
   </head>
   <body>
+   <div id="charCounter">128 characters left</div>
     <div id="notes" class="container">
       <div class="columns">
         <div class="column col-9">
@@ -96,15 +97,21 @@ function getData() {
     } else {
       alert("Note exceeds 128 characters limit.");
     }
+      //document.getElementById("charCounter").textContent = "128 characters left";
+
   });
   
-  document.getElementById("note-new").addEventListener("input", function () {
-    const noteInput = this;
-    const charCounter = document.getElementById("charCounter");
-    const remainingChars = 128 - noteInput.value.length;
-  
-    charCounter.textContent = `${remainingChars} characters left`;
-  });
+document.getElementById("note-new").addEventListener("input", function() {
+  const noteInput = this;
+  const charCounter = document.getElementById("charCounter");
+  const remainingChars = 128 - noteInput.value.length;
+  charCounter.textContent = `${remainingChars} characters left`;
+});
+
+
+
+});
+
 
 // Called when app starts
 function onInit() {
