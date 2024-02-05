@@ -100,11 +100,11 @@ function getData() {
     //  }
     });
 
-    document.getElementById("note-new").addEventListener("change", function() {
+    document.getElementById("note-new").addEventListener("input", function() {
       const noteInput = document.getElementById("note-new");  //
       const charCounter = document.getElementById("charCounter");
       //const remainingChars = 128 - noteInput.length;
-      charCounter.textContent = `${noteInput.value.length} `;
+      charCounter.textContent = noteInput.value.length;
     });
 
 
