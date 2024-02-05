@@ -18,7 +18,7 @@
     <script>
 var notesElement = document.getElementById("notes");
 var notes = {};
-const Charleft = document.querySelector('charCounter');
+//const Charleft = document.querySelector('charCounter');
 function disableFormInput() {
   document.querySelectorAll(".form-input").forEach(el => el.disabled = true);
   document.querySelectorAll(".btn").forEach(el => el.disabled = true);
@@ -102,8 +102,9 @@ function getData() {
 
     document.getElementById("note-new").addEventListener("input", function() {
       const noteInput = this;  // 'this' refers to the textarea element
+      const charCounter = document.getElementById("charCounter");
       //const remainingChars = 128 - noteInput.length;
-      CharCounter.innerText = String(noteInput.length);
+      charCounter.textContent = '${charCounter}';
     });
 
 
