@@ -96,15 +96,15 @@ function getData() {
           location.reload(); // reload so we see current data
       //  });
      // } else {
-        alert("Note exceeds 128 characters limit.");
+     //   alert("Note exceeds 128 characters limit.");
     //  }
     });
 
     document.getElementById("note-new").addEventListener("change", function() {
-      const noteInput = this;  // 'this' refers to the textarea element
+      const noteInput = document.getElementById("note-new");  //
       const charCounter = document.getElementById("charCounter");
       //const remainingChars = 128 - noteInput.length;
-      charCounter.innerText = String(noteInput.value.length);
+      charCounter.textContent = `${noteInput.value.length} `;
     });
 
 
