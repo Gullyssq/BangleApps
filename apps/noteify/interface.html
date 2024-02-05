@@ -3,10 +3,7 @@
     <link rel="stylesheet" href="../../css/spectre.min.css">
   </head>
   <body>
-    <div class="grid">
    <div id="charCounter">128 </div> 
-   <h5 id="string"> string left </h5>
-    </div>
     <div id="notes" class="container">
       <div class="columns">
         <div class="column col-9">
@@ -105,8 +102,8 @@ function getData() {
 
     document.getElementById("note-new").addEventListener("input", function() {
       const noteInput = this;  // 'this' refers to the textarea element
-      const remainingChars = 128 - noteInput.value.length;
-      CharCounter.innerText = String(remainingChars);
+      //const remainingChars = 128 - noteInput.length;
+      CharCounter.innerText = String(noteInput.length);
     });
 
 
