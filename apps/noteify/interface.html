@@ -7,7 +7,7 @@
     <div id="notes" class="container">
       <div class="columns">
         <div class="column col-9">
-          <textarea class="form-input" id="note-new" placeholder="New note" rows="3" maxlength="128"></textarea>
+          <textarea class="form-input" id="note-new" placeholder="New note" rows="4" maxlength="128"></textarea>
         </div>
         <div class="column col-3">
           <button class="btn btn-default" id="btnAdd">Add</button>
@@ -44,7 +44,7 @@ function getData() {
       const textarea = document.createElement("textarea");
       textarea.id = "note" + i;
       textarea.classList.add('form-input');
-      textarea.rows = 3;
+      textarea.rows = 4;
       textarea.value = note.note;
       divColumn1.appendChild(textarea);
       divColumn.appendChild(divColumn1);
@@ -78,6 +78,10 @@ function getData() {
         });
       }
       divColumn2.appendChild(buttonDelete);
+
+      const provaButt= document.createElement("button");
+      provaButt.classList.add('btn');
+      provaButt.textContent = "Delete";
       divColumn.appendChild(divColumn2);
 
       notesElement.prepend(document.createElement("hr"));
