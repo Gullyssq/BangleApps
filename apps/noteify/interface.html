@@ -84,33 +84,28 @@ function getData() {
       notesElement.prepend(divColumn);
     });
 
-  document.getElementById("btnAdd").addEventListener("click", function() {
-    const noteInput = document.getElementById("note-new");
-    const note = noteInput.value;
-  
-    if (note.length <= 128) {
-      notes.push({ "note": note });
-      disableFormInput();
-      Util.writeStorage("noteify.json", JSON.stringify(notes), () => {
-        location.reload(); // reload so we see current data
-      });
-    } else {
-      alert("Note exceeds 128 characters limit.");
-    }
-      //document.getElementById("charCounter").textContent = "128 characters left";
+    document.getElementById("btnAdd").addEventListener("click", function() {
+      const noteInput = document.getElementById("note-new");
+      const note = noteInput.value;
+    
+      if (note.length <= 128) {
+        notes.push({ "note": note });
+        disableFormInput();
+        Util.writeStorage("noteify.json", JSON.stringify(notes), () => {
+          location.reload(); // reload so we see current data
+        });
+      } else {
+        alert("Note exceeds 128 characters limit.");
+      }
+    });
 
+    document.getElementById("note-new").addEventListener("input", function() {
+    const noteInput = this;  // 'this' refers to the textarea element
+    const charCounter = document.getElementById("charCounter");
+    const remainingChars = 128 - noteInput.value.length;
+    charCounter.textContent = `${remainingChars} characters left`;
   });
-  
-document.getElementById("note-new").addEventListener("input", function() {
-  const noteInput = this;
-  const charCounter = document.getElementById("charCounter");
-  const remainingChars = 128 - noteInput.value.length;
-  charCounter.textContent = `${remainingChars} characters left`;
-});
 
-
-
-});
 
 
 // Called when app starts
