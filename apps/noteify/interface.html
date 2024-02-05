@@ -81,7 +81,7 @@ function getData() {
 
       const provaButt= document.createElement("button");
       provaButt.classList.add('btn');
-      provaButt.textContent = note.note.length + "left";
+      provaButt.textContent = 128 - textarea.value.length + " left";
       divColumn2.appendChild(provaButt);
       divColumn.appendChild(divColumn2);
       document.getElementById("provaButt").disabled = true;
