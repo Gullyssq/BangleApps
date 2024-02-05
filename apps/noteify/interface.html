@@ -100,11 +100,11 @@ function getData() {
       }
     });
 
-    document.getElementById("note-new").addEventListener("input", function() {
+    document.getElementById("note-new").addEventListener("change", function() {
       const noteInput = this;  // 'this' refers to the textarea element
       const charCounter = document.getElementById("charCounter");
       //const remainingChars = 128 - noteInput.length;
-      charCounter.textContent = '${charCounter}';
+      charCounter.textContent = '${noteInput.length}';
     });
 
 
