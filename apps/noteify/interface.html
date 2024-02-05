@@ -7,7 +7,7 @@
     <div id="notes" class="container">
       <div class="columns">
         <div class="column col-9">
-          <textarea class="form-input" id="note-new" placeholder="New note" rows="3"></textarea>
+          <textarea class="form-input" id="note-new" placeholder="New note" rows="3" maxlength="128"></textarea>
         </div>
         <div class="column col-3">
           <button class="btn btn-default" id="btnAdd">Add</button>
@@ -88,7 +88,9 @@ function getData() {
     document.getElementById("btnAdd").addEventListener("click", function() {
       const noteInput = document.getElementById("note-new");
       const note = noteInput.value;
-    
+      const charCounter = document.getElementById("charCounter");
+      const remainingChars = 128 - noteInput.value.length ;
+      charCounter.textContent = remainingChars  + "chars left";
      // if (note.length <= 128) {
         notes.push({ "note": note });
         disableFormInput();
@@ -100,12 +102,12 @@ function getData() {
     //  }
     });
 
-    document.getElementById("note-new").addEventListener("input", function() {
-      const noteInput = document.getElementById("note-new");  //
-      const charCounter = document.getElementById("charCounter");
+   // document.getElementById("note-new").addEventListener("input", function() {
+    //  const noteInput = document.getElementById("note-new");  //
+    //  const charCounter = document.getElementById("charCounter");
       //const remainingChars = 128 - noteInput.length;
-      charCounter.textContent = noteInput.value.length;
-    });
+    //  charCounter.textContent = noteInput.value.length;
+    //});
 
 
 // Called when app starts
