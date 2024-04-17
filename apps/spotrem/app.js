@@ -168,7 +168,7 @@ let albumSearchTerm = function() { // input album to search for
 
 let searchPlayWOTags = ()=>(createCommand({action:"android.media.action.MEDIA_PLAY_FROM_SEARCH", extra:{query:simpleSearch}, flags:["FLAG_ACTIVITY_NEW_TASK"]})());
 
-let searchPlayWTags = createCommand({action:"android.media.action.MEDIA_PLAY_FROM_SEARCH", extra:{query:assembleSearchString()}, flags:["FLAG_ACTIVITY_NEW_TASK"]});
+let searchPlayWTags = ()=>(createCommand({action:"android.media.action.MEDIA_PLAY_FROM_SEARCH", extra:{query:assembleSearchString()}, flags:["FLAG_ACTIVITY_NEW_TASK"]})());
 
 let playVreden = createCommand({data:"spotify:track:5QEFFJ5tAeRlVquCUNpAJY:play"});
 
