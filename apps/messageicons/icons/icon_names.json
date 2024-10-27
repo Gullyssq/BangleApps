@@ -78,6 +78,7 @@
   { "app":"post & dhl", "icon":"delivery.png" },
   { "app":"proton mail", "icon":"protonmail.png" },
   { "app":"reddit", "icon":"reddit.png" },
+  { "app":"revolut", "icon":"revolut.png" },
 	{ "app":"sync pro", "icon":"reddit.png" },
 	{ "app":"sync dev", "icon":"reddit.png" },
 	{ "app":"boost", "icon":"reddit.png" },
