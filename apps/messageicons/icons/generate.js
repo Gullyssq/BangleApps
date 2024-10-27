@@ -129,6 +129,7 @@ exports.getColor = function(msg,options) {
     "pocket": "#ef4154f", // https://blog.getpocket.com/press/
     "post & dhl": "#f2c101",
     "reddit": "#ff4500", // https://www.redditinc.com/brand
+    "revolut": "#0ff", // Revolut https://developer.revolut.com/docs/resources/marketing-assets-guidelines/open-banking-logo-guidelines
     "signal": "#3a76f0", // https://github.com/signalapp/Signal-Desktop/blob/main/images/signal-logo.svg
     "skype": "#0078d4", // https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products
     "slack": "#e51670",
